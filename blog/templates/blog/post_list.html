@@ -1,20 +1,35 @@
-<!DOCTYPE html>
-<html lang="en">
+{% load static %}
+<html>
 <head>
-    <meta charset="UTF-8">
-    <title>homePage</title>
+	<title>Django Girls blog</title>
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Kaushan+Script&family=Montserrat:ital,wght@0,700;1,400&display=swap" rel="stylesheet">
+	<link rel="stylesheet" href="{% static 'css/blog.css' %}">
 </head>
-<body>
- <div>
-    <h1><a href="/">Django Girls Blog</a></h1>
+<header class="header">
+	<div class="container">
+		<div class="header__inner">
+			<div class="header__logo">Artemis</div>
+
+			<nav class="nav">
+				<a class="nav__link" href="#">About</a>
+				<a class="nav__link" href="#">Service</a>
+				<a class="nav__link" href="#">Blog</a>
+				<a class="nav__link" href="#">Work</a>
+				<a class="nav__link" href="#">Contact</a>
+			</nav>
+
+		</div>
+	</div>
+</header>
+<div class="intro">
+	<div class="container">
+		<div class="intro__inner">
+			<h2 class="intro__suptitle">Jango Girls</h2>
+			<h1 class="intro__title">Welcome to Artemis</h1>
+		</div>
+	</div>
 </div>
-
-{% for post in posts %}
-    <div>
-        <p>published: {{ post.published_date }}</p>
-        <h1><a href="">{{ post.title }}</a></h1>
-        <p>{{ post.text|linebreaksbr }}</p>
-    </div>
-{% endfor %}}</body>
+</body>
 </html>
-
